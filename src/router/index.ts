@@ -10,7 +10,7 @@ const router = createRouter({
 
 // 路由守卫/钩子 hook
 // 全局前置守卫 / 路由拦截
-router.beforeEach((to, from) => {
+router.beforeEach((to) => {
   const { title } = to.meta
   document.title = (title as string) || '默认标题'
 

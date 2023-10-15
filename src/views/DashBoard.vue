@@ -1,19 +1,11 @@
 <template>
-  <el-container>
-    <el-header>
-      <Header></Header>
-    </el-header>
-    <el-main>
-      <ChatView
-        :info="data"
-        v-for="data in chatinfos"
-      ></ChatView>
-    </el-main>
-  </el-container>
+  <ChatView
+    :info="data"
+    v-for="data in chatinfos"
+  ></ChatView>
 </template>
 
 <script setup lang="ts">
-import Header from '@/components/Header.vue'
 import ChatView from '@/components/ChatView.vue'
 import { getChats } from '@/plugins/api'
 import { ChatInfo } from '@/schema'

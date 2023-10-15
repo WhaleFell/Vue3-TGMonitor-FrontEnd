@@ -17,3 +17,27 @@ export interface ChatInfo {
   create_time: Date
   last_msg_time: Date
 }
+
+export interface queryMsgParam {
+  from_chat_id: string
+  page: number
+  size: number
+  tg_id?: string
+  keyword?: string
+}
+
+export interface Msg {
+  tg_id: string
+  username: string
+  from_chat_id: string
+  content: string
+  msg_time: Date
+}
+
+export interface msgPagination {
+  total: number
+  page: number
+  size: number
+  pages: number
+  data: Array<Msg>
+}

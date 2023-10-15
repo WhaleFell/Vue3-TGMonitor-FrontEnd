@@ -18,7 +18,7 @@ request.interceptors.request.use(
     // 在发送请求之前做些什么
     if (config.debug.value) {
       useNotice(
-        'Response',
+        'Request',
         `url:${axiosConfig.url}`,
         NoticeType.INFO,
       )

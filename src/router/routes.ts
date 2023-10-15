@@ -15,6 +15,14 @@ const routes: Array<RouteRecordRaw> = [
     },
   },
   {
+    path: '/msg/:chatid',
+    name: 'msg',
+    component: () => import('@/views/Msg.vue'),
+    meta: {
+      title: 'ChatView | 群信息',
+    },
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: '404',
     component: () => import('@/views/404.vue'),
